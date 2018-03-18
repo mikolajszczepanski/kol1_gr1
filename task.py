@@ -2,22 +2,19 @@
 
 from lib import Matrix
 
-print('start')
+def main():
+    m1 = Matrix(
+        [0,1,2],
+        [4,5,6],
+        [7,8,9]
+        )
+    m2 = Matrix(
+        [5,3,-2],
+        [5,5,-10],
+        [7,8,8]
+        )
+    m3 = (( 3 - ( 1 + m1 + m2 - 3 * m1 - m1 ) ) * 2) + 10 + (m1 * m2)
+    print(m3)
 
-matrix_1 = Matrix(1,2,3,4)
-matrix_2 = Matrix(1,2,3,4)
-matrix_3 = matrix_1.add(matrix_2)
-
-print('Test 1')
-print(matrix_3.x)
-print(matrix_3.y)
-print(matrix_3.z)
-print(matrix_3.w)
-
-matrix_4 = matrix_1.product(matrix_2)
-
-print('Test 2')
-print(matrix_4.x)
-print(matrix_4.y)
-print(matrix_4.z)
-print(matrix_4.w)
+if __name__ == "__main__":
+    main()
